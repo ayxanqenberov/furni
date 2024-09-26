@@ -1,0 +1,58 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+  // background-color: transparent;
+
+}
+
+nav {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+  }
+
+  ul {
+    display: flex;
+    gap: 25px;
+
+    li {
+      a {
+        color: white;
+        cursor: pointer;
+
+        &:hover {
+          color: yellow;
+
+          // .line {
+          //   display: block;
+          // }
+        }
+
+        .line {
+          display: none;
+          padding-top: 5px;
+          height: 10px;
+          background-color: red;
+          width: 20px;
+          // display: none;
+          animation: line 1s forwards;
+        }
+      }
+    }
+  }
+}
+
+@keyframes line {
+  from {
+    width: 0px;
+  }to {
+    width: 20px;
+  }
+}

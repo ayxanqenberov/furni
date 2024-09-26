@@ -1,0 +1,123 @@
+#productsSect {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    height: auto;
+    margin: 30px 0;
+
+    .cardleft {
+        width: 35%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        p {
+            color: #7B6A6A;
+        }
+
+        button {
+            width: 40%;
+            padding: 15px;
+            border: none;
+            background-color: rgb(56, 56, 56);
+            border-radius: 50px;
+            cursor: pointer;
+            color: rgb(222, 222, 222);
+
+            &:hover {
+                transition: all .3s;
+                color: #fff;
+                background-color: black;
+            }
+        }
+    }
+
+    .addProduct{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 20px;
+        .cards {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            padding-bottom: 10px;
+            height: 300px;
+    
+            &:hover {
+                .afterCard {
+                    animation: moveUp 1s forwards;
+                    display: block;
+                    // position: relative;
+    
+                    
+                }
+                .plus {
+                    display: block;
+                    bottom: -35px;
+                    transform: translateY(-20px);
+                }
+    
+            }
+    
+            img {
+                width: 50%;
+                object-fit: contain;
+                height: 195px;
+            }
+    
+            .productTitle {
+                text-align: center;
+                font-size: 13px;
+                font-weight: bold;
+                width: 50%;
+            }
+    
+            .afterCard {
+                display: none;
+                position: absolute;
+                bottom: 0px;
+                z-index: -999;
+                background-color: #DCE5E4;
+                border-radius: 10px;
+                
+            }
+            .plus{
+                display: none;
+                position: absolute;
+                bottom: 10px;
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                border: none;
+                background-color: black;
+                color: #fff;
+                font-size: 19px;
+    
+            }
+            .price{
+                padding-bottom: 20px;
+            }
+        }
+    }
+}
+
+@keyframes moveUp {
+    from {
+        height: 0;
+        width: 270px;
+    }
+
+    to {
+        height: 200px;
+        width: 270px;
+    }
+}
+
+@media (max-width: 768px){
+    .addProduct{
+        grid-template-rows: 1fr !important;
+    }
+}

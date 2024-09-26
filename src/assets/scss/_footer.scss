@@ -1,0 +1,58 @@
+/* App.css */
+.footer {
+    background-color: #f5f5f5;
+    padding: 50px 0;
+    color: #333;
+  }
+  
+  .footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footer .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .footer h4 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .footer ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer li {
+    margin-bottom: 10px;
+  }
+  
+  .footer li a {
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .footer li a:hover {
+    text-decoration: underline;
+  }
+  
+  .social-icons {
+    display: flex;
+    align-items: center;
+  }
+  
+  .social-icons li {
+    margin-right: 10px;
+  }
+  
+  .social-icons li a {
+    color: #333;
+    font-size: 18px;
+  }
+  
+  .social-icons li a:hover {
+    color: #007bff;
+  }
