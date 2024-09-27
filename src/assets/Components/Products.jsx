@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
-import "../scss/_products.scss";
-import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const Products = () => {
   const [products, setProducts] = useState([]);
+  const navigate = useNavigate(); // Add this line
+  
   const getData = async () => {
     try {
       const response = await axios.get("https://fakestoreapi.com/products");
@@ -12,6 +12,7 @@ const Products = () => {
       console.error("Error fetching data:", error);
     }
   };
+
   useEffect(() => {
     getData();
   }, []); 
@@ -35,7 +36,7 @@ const Products = () => {
               <span className="productTitle">{item.title}</span>
               <span className="price">${item.price}</span>
               <div className="afterCard"></div>
-              <button className="plus">+</button>
+              <button onClick={() => navigate(`/detail/${item.id}`)} className="plus">+</button>
             </div>
           ))
         ) : (
@@ -45,5 +46,3 @@ const Products = () => {
     </section>
   );
 };
-
-export default Products;
